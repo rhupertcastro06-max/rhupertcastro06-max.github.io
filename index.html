@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <head>
     <title>Mendoza Webpage</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <style>
 .container {
-    width: 950px;
-    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .Rhupert {
-    float: right;
-    margin-left: 15px;
-    margin-bottom: 10px;
+    max-width: 310px;
+    height: auto ;
 }
 
 .American {
-    float: left;
-    margin-right: 15px;
-    marging-top: 20px;
+    max-width: 300px;
+    height: auto;
 }
 
 .Sinigang {
-    float: top;
-    margin-right: 15px;
+    display: block;
+    margin: 0 auto;
 }
-        
+    
+.Ingredients {
+  width: 45%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.Process {
+  width: 45%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
 .code-block { 
   background-color: #f0f0f0;
   border: 1px solid #ccc;
@@ -32,22 +45,58 @@
   white-space: pre-wrap;
   overflow: auto;
   border-radius: 15px;
+  margin: 2%;
 }
 
+.img-text-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.img-text-container img {
+  margin-right: 20px;
+  max-width: 310px;
+  height: auto;
+}
+
+.img-text-container .code-block {
+  flex:1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .Ingredients, .Process {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .img-text-container {
+    flex-direction: column;
+  }
+  
+  .img-text-container img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
     </style>
 </head>
 <body style="background-image: url('Images/SZASOS.jpg'); background-size: cover;">
     <h1 style="text-align: Center; color: White;" >Autobiography</h1>
     <hr size="10" color="black">
     <h2 style= "text-align: Center; color: White;">Welcome to Mendoza Webpage</h2>
-
-    <div class="container">
+    
+    <div class="img-text-container">
     <p style="text-align: Right;"><img src="Images/Rhupert.jpg" alt="Rhupert" class="Rhupert" width="310" height="300" image-align:left;></p>
       <div class="code-block">
       <p>Hey Wassup, My name is Rhupert Mendoza Castro, and I was born on September 6, 2008, in marikina City. I'm the eldest child in my father side, and we're 8 in my mother side, and I am the sixth among my siblings, my mother taught me the value of responsibility and hard work, and If you're wondering why I only mentioned my mother, it's because I grew up without my father. I grew up in a simple home, but my childhood was filled with love,lessons, and unforgettable memories.</p>
       </div>
-        
-       <div class="container"></div> 
+    </div>
+  <div class="img-text-container">
     <img src="Images/American.jpg" class="American" width="300" height="300">
     <div class="code-block">
     <p>This is me when I was 6-7 y/o.
@@ -59,41 +108,96 @@ This picture was taken during a show we were watching. And Some people Used to c
     <div class="code-block">
   <p>When I entered high school, I began to discover more about myself. It was where I experience my first real challenges academic pressure, expectations for the future, and the struggle of finding my own direction in life. </p>
     </div>
-
+  </div>
   <div class="code-block">
+    <p>But I never give up, I keep trying and work hard to get a better future.</p>
+  </div>
+  <div class="code-block">
+    <center><h1>My Favorite Food</h1></center>
+    <center><h2><b>Sinigang</b></h2></center>
   <center><img src="Images/Sinigang.jpg" class="Sinigang" alt="Sinigang" width="350" height="350"></center>
-        <center><h3>Ingredients</h3>
+  </div>
+  <div class="container">
+  <div class="code-block Ingredients">
+      <h2>Ingredients</h2>
         <ul>
             <li>Main Ingredient
                 <ul>
-                    <li>Pork/beef/Shirmp/Fish/Chicken</li>
+                    <li>Pork/Beef/Shirmp/Fish/Chicken</li>
                     <li>Tamarind</li>
                 </ul>
             </li>
+            <li>Vegetables
+                <ul>
+                  <li>Okra</li>
+                  <li>Taro (Gabi) (to thicken the broth)</li>
+                  <li>Radish</li>
+                  <li>Water Spinach (Kangkong)</li>
+                  <li>String Beans (Sitaw)</li>
+                  <li>Eggplant (Talong)</li>
+                </ul>
+            </li>
+            <li>Aromatics
+                <ul>
+                  <li>Onion</li>
+                  <li>Tomatoes</li>
+                  <li>Garlic</li>
+                </ul>
+            </li>
+            <li>Seasonings
+                <ul>
+                  <li>Fish Sauce (Patis)</li>
+                  <li>Salt</li>
+                  <li>Long Green Chili Peppers (Siling haba) (For a bit of spice)</li>
+                </ul>
+            </li>
         </ul>
-        </center>
-        <center>
-        <ul>
-             <li>Vegetables
-                  <ul>
-                      <li>Okra</li>
-                      <li>Taro (Gabi) (to thicken the broth</li>
-                      <li>Radish</li>
-                      <li>Water Spinach (kangkong)</li>
-                      <li>String Beans (Sitaw)</li>
-                      <li>Eggplant (Talong)</li>
-                  </ul>
-             </li>
-        </ul>
-        </center>
-    </div>
+  </div>
+  <div class="code-block Process">
+        <h2>The Process of Making Sinigang</h2>
+        <ol>
+           <li><h4>Sauté Aromatics:</h4></li>
+             <ul>
+               <li>In a large pot, Sauté garlic and onions until fragrants.</li>
+               <li>Add tomatoes and cook until they soften,,</li>
+             </ul>
+             <li><h4>Add Protein:</h4></li>
+             <ul>
+               <li>Add your choice of protein (Pork, Beef, Shrimp, Fish, or Chicken) and cook until it changes color.</li>
+               <li>For pork, some recipes recommend searing the pork belly before adding the water to develop a deeper flavor.</li>
+             </ul>
+             <li><h4>Pour in Water:</h4></li>
+             <ul>
+               <li>Fill the pot with enough water to cover the Ingredients.</li>
+               <li>Bring to a boil and then reduce to a simmer.</li>
+             </ul>
+             <li><h4>Introduce the Souring Agent:</h4></li>
+             <ul>
+               <li>Add tamarind pulp or powder to create the signature sour taste.</li>
+               <li>If using tamarind pulp, squeeze it into the pot and let it dissolve. If using powder, add to taste.</li>
+               <li>Alternatively, use a sinigang mix for convenience.</li>
+             </ul>
+             <li><h4>Add Vegetables:</h4></li>
+             <ul>
+               <li>Toss in vegetables like radish, taro, eggplant, okra, string beans, and water spinach (kangkong),,.</li>
+               <li>Add vegetables that require longer cooking times (like taro and radish) earlier, and leafy greens (like kangkong or spinach) towards the end.</li>
+             </ul>
+             <li><h4>Simmer:</h4></li>
+             <ul>
+               <li>Let the soup simmer until the meat and vegetables are tender,.</li>
+               <li>This typically takes about 30-45 minutes for the meat to become tender.</li>
+             </ul>
+             <li><h4>Season to Perfection:</h4></li>
+             <ul>
+               <li>Season with Fish Sauce (Patis) and salt according to your preference,,.</li>
+               <li>Add chilli peppers if you want a bit of heat,.</li>
+             </ul>
+             <li><h4>Serve Hot:</h4></li>
+             <ul>
+               <li>Ladle the fragrant, tangy soup into bowls and serve it piping hot with freshly cooked rice,,.</li>
+             </ul>
+        </ol>
+  </div>
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
